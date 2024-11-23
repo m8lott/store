@@ -1,0 +1,146 @@
+.mission {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background-color: #f9f9f9;
+    padding: 60px 0;
+    overflow: hidden;
+    margin-top: 120px;
+}
+
+.mission__container {
+    padding: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    color: #333;
+    transition: transform 0.5s ease-in-out;
+    position: relative;
+}
+
+.mission__container:hover {
+    transform: translateY(-10px);
+}
+
+.mission__left {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    animation: slideInLeft 1s ease-out forwards;
+    opacity: 0;
+}
+
+.mission__title h2 {
+    font-size: 46px;
+    font-weight: 600;
+    line-height: 59.8px;
+    max-width: 600px;
+    color: #000;
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+    @media screen and (max-width: 992px) {
+        max-width: 100%;
+    }
+}
+
+.mission__title h2:hover {
+    color: #8e44ad;
+}
+
+.mission__desc p {
+    font-size: 16px;
+    line-height: 22px;
+    max-width: 600px;
+    margin-top: 15px;
+    color: #7F8C8D;
+    opacity: 0.8;
+    animation: fadeIn 1.2s ease-out forwards;
+    @media screen and (max-width: 992px) {
+        max-width: 100%;
+    }
+}
+
+.mission__img img {
+    width: 100%;
+    border-radius: 10px;
+    max-width: 700px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.mission__img img:hover {
+    transform: scale(1.05);
+}
+
+.mission::before,
+.mission::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(142, 68, 173, 0.1);
+    border-radius: 50%;
+    z-index: 1;
+    animation: moveShapes 8s linear infinite;
+}
+
+.mission::before {
+    left: 10%;
+    animation-delay: 2s;
+}
+
+.mission::after {
+    right: 10%;
+    animation-delay: 4s;
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes moveShapes {
+    0% {
+        transform: translateY(-50px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(50px) rotate(180deg);
+    }
+    100% {
+        transform: translateY(-50px) rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .mission__container {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 574px) {
+    .mission__title h2 {
+        font-size: 30px;
+        line-height: 35px;
+    }
+}

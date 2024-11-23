@@ -1,0 +1,88 @@
+.shop-baner {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    overflow: hidden;
+}
+
+.shop-baner__container {
+    padding: 150px 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-image: linear-gradient(10.93deg, #141414 10.18%, rgba(9, 18, 66, 0.2) 90.92%), 
+        url('../assets/img/shopBaner.jpeg');
+    background-position: center 1px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.shop-baner__title h1 {
+    font-size: 46px;
+    font-weight: 600;
+    line-height: 59.8px;
+    max-width: 600px;
+    text-align: center;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media screen and (max-width: 574px) {
+    .shop-baner__title h1 {
+        font-size: 30px;
+        line-height: 35px;
+    }
+}
+
+.shop-baner__desc p {
+    font-size: 20px;
+    line-height: 27px;
+    max-width: 600px;
+    opacity: 0;
+    animation: fadeIn 1.8s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+.shop-baner__btn {
+    margin-top: 40px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+    animation-delay: 1.5s;
+}
+
+.shop-baner__btn a {
+    display: block;
+    padding: 20px 50px;
+    border-radius: 10px;
+    background: linear-gradient(87.32deg, #E2A300 4.47%, #E29500 95.53%);
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    font-size: 16px;
+    line-height: 18.75px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.shop-baner__btn a:hover {
+    box-shadow: 0 0 30px rgba(226, 163, 0, 0.8), 0 0 60px rgba(226, 149, 0, 0.6);
+    transform: scale(1.05);
+
+}

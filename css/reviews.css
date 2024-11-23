@@ -1,0 +1,121 @@
+.reviews{
+    width: 100%;
+    margin-top: 130px;
+}
+.reviews__container {
+    padding: 0 35px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    color: black;
+    flex-direction: column;
+}
+.reviews__title h2{
+       font-size: 46px;
+    font-weight: 600;
+    line-height: 59.8px;
+    max-width: 600px;
+    text-align: center;
+    @media screen and (max-width: 574px) {
+        font-size: 30px;
+        line-height: 35px;
+    } 
+}
+.reviews__items {
+    display: flex;
+    gap: 30px;
+    
+    @media screen and (max-width: 992px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.reviews__item {
+    background: black;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+    box-sizing: border-box;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+    @media screen and (max-width: 992px) {
+        animation: none;
+        max-width: 100%;
+    }
+}
+.reviews__item-img img{
+    width: 200px;
+    border-radius: 50%;
+}
+.reviews__item-name p{
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+}
+.reviews__item-desc p{
+    font-size: 16px;
+    line-height: 22px;
+}
+
+@keyframes sway-up-down {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes sway-down-up {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+}
+
+@keyframes sway-up-down-large {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes sway-down-up-large {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+.reviews__item:nth-child(1) {
+    animation: sway-up-down 3s infinite ease-in-out;
+}
+
+.reviews__item:nth-child(2) {
+    animation: sway-down-up 3s infinite ease-in-out;
+}
+
+.reviews__item:nth-child(3) {
+    animation: sway-up-down-large 3s infinite ease-in-out;
+}
+
+.reviews__item:nth-child(4) {
+    animation: sway-down-up-large 3s infinite ease-in-out;
+}
+
+
+

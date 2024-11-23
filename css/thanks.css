@@ -1,0 +1,38 @@
+.thanks__container {
+    width: 100%;
+    padding: 0 40px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    margin-top: 200px;
+}
+
+.thanks__container h1 {
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 73px;
+    @media screen and (max-width: 768px) {
+        font-size: 40px;
+        line-height: 68px;
+    }
+}
+
+.btnn {
+    max-width: 200px;
+    padding: 20px 50px;
+    border-radius: 10px;
+    background: linear-gradient(87.32deg, #E2A300 4.47%, #E29500 95.53%);
+    text-align: center;
+    font-size: 16px;
+    line-height: 18.75px;
+    transition: 0.5s;
+    cursor: pointer;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 1);
+}
+
+
+.btnn:hover {
+    box-shadow: 0 0 30px rgba(226, 163, 0, 0.8), 0 0 60px rgba(226, 149, 0, 0.6);
+}

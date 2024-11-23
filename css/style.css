@@ -1,0 +1,72 @@
+@import url('normalize.css');
+@import url('header.css');
+@import url('baner.css');
+@import url('countDown.css');
+@import url('main-catalog.css');
+@import url('shop-info.css');
+@import url('testimonial.css');
+@import url('footer.css');
+@import url('statistic.css');
+@import url('cart.css');
+@import url('info.css');
+@import url('reviews.css');
+@import url('subscribe.css');
+@import url('about.css');
+@import url('products.css');
+@import url('benefits.css');
+@import url('mission.css');
+@import url('slider.css');
+@import url('location.css');
+@import url('shop-baner.css');
+@import url('feedback.css');
+@import url('thanks.css');
+@import url('privacy.css');
+@import url('terms.css');
+@import url('disclaimer.css');
+
+@font-face {
+    font-family: "Lato";
+    src: url('../assets/font/Lato-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    overflow-x: hidden;
+  }
+
+  .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+h2 {
+  font-size: 46px;
+  font-weight: 600;
+  line-height: 59.8px;
+  @media screen and (max-width: 574px) {
+      font-size: 30px;
+      line-height: 35px;
+  }
+}
+

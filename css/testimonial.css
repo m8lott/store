@@ -1,0 +1,117 @@
+.reviews {
+    width: 100%;
+    margin-top: 140px;
+}
+.reviews__container {
+    padding: 0 35px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-direction: column;
+    text-align: center;
+}
+.reviews__title {
+    max-width: 600px;
+}
+.reviews__items {
+    width: 100%;
+    position: relative;
+}
+.swiper-wrapper {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+.swiper-button-next,
+.swiper-button-prev {
+    color: white;
+    outline: none;
+    transition: color 0.3s ease;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    color: #FF6600; 
+}
+.swiper-pagination-bullet {
+    background-color: white;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+.testimonial-box {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+.testimonial-box:hover {
+    box-shadow: 0 0 20px rgba(255, 102, 0, 0.4);
+}
+.testimonial {
+    display: grid;
+    grid-template-rows: 1.3fr 0.7fr;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+    padding: 20px;
+    color: white;
+    border-radius: 15px;
+}
+
+.fas {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+    color: #FF6600;
+    opacity: 0.8;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.fas:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+.testimonial-text {
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+    padding: 20px 15px;
+    color: #e0e0e0; 
+}
+.testimonial-user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+.user-info {
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+.user-name {
+    font-weight: 800;
+    color: #FF6600;
+}
+.user-job-details {
+    margin: 5px 0 0 0;
+    color: #bfbfbf;
+    font-size: 14px;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

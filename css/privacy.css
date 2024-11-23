@@ -1,0 +1,43 @@
+.privacy {
+    width: 100%;
+    color: #292929;
+    margin-top: 200px;
+}
+
+.privacy__container {
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.privacy__container p {
+    font-size: 16px;
+    line-height: 20px;
+}
+.privacy__container h1 {
+    display: flex;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 59.8px;
+    @media screen and (max-width: 574px) {
+        font-size: 40px;
+        line-height: 35px;
+    }
+}
+.privacy__container h2 {
+    display: flex;
+    font-size: 46px;
+    font-weight: 600;
+    line-height: 59.8px;
+    @media screen and (max-width: 574px) {
+        font-size: 30px;
+        line-height: 35px;
+    }
+}
+.privacy__container ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style:circle;
+    padding-left: 30px;
+}

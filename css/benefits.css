@@ -1,0 +1,111 @@
+.benefits__ {
+    width: 100%;
+    margin-top: 110px;
+}
+
+.benefits__container {
+    padding: 0 35px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    color: black;
+    flex-direction: column;
+}
+
+.benefits__title h2 {
+    margin-top: 180px;
+    font-size: 46px;
+    font-weight: 600;
+    line-height: 59.8px;
+    max-width: 600px;
+    text-align: center;
+    color: black;
+
+}
+
+
+.benefits__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+    @media screen and (max-width: 992px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.benefits__item {
+    display: flex;
+    text-align: center;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    padding: 30px;
+    color: white;
+    background: linear-gradient(135deg, #6a5acd, #4b0082); /* Gradient background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: pulse 3s infinite; /* Reduced pulse effect */
+}
+
+.benefits__item:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.benefits__item-img img {
+    width: 100px;
+    animation: rotateIcon 4s infinite linear; /* Continuous rotation for icons */
+    transition: transform 0.3s ease;
+}
+
+.benefits__item-img img:hover {
+    transform: scale(1.1); /* Slight scale on hover */
+}
+
+.benefits__item-title h3 {
+    font-size: 20px;
+    line-height: 27px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.benefits__item-desc p {
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 10px;
+}
+
+/* Keyframes for infinite animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02); /* Reduced scale for less pronounced pulse */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes rotateIcon {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 574px) {
+    .benefits__title h2 {
+        font-size: 30px;
+        line-height: 35px;
+    }
+    .benefits__item {
+        padding: 20px;
+    }
+}

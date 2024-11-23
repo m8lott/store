@@ -1,0 +1,78 @@
+/* Subtle Pulse Animation */
+@keyframes subtlePulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.02); /* Slightly scale the image */
+        opacity: 1; /* Keep opacity the same for a subtle effect */
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.shop-info {
+    width: 100%;
+    margin-top: 150px;
+}
+
+.shop-info__container {
+    padding: 0 35px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    color: black;
+    flex-direction: column;
+}
+
+.shop-info__left {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.shop-info__right {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.shop-info__main {
+    display: flex;
+    gap: 20px;
+    @media screen and (max-width: 992px) {
+        flex-direction: column;
+    }
+}
+
+.shop-info__title h2 {
+    font-size: 46px;
+    font-weight: 600;
+    line-height: 59.8px;
+    max-width: 600px;
+    text-align: center;
+    @media screen and (max-width: 574px) {
+        font-size: 30px;
+        line-height: 35px;
+    }
+    
+}
+
+.shop-info__desc p {
+    font-size: 16px;
+    line-height: 22px;
+    max-width: 600px;
+    @media screen and (max-width: 992px) {
+        max-width: 100%;
+    }
+}
+
+.shop-info__img img {
+    width: 100%;
+    border-radius: 10px;
+    max-width: 700px;
+    animation: subtlePulse 10s infinite ease-in-out; /* Apply subtle pulse animation */
+}
